@@ -15,7 +15,7 @@ const App = () => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const projectRef = useRef(null);
-  const contactRef = useRef();
+  const contactRef = useRef(null);
   const scrollEffect = (targetRef) => {
 	targetRef.current.scrollIntoView({ 
     behavior: "smooth"
@@ -26,19 +26,35 @@ const App = () => {
   return (
     <>
     <PageContainer>
-      <Header 
+    <div>
+          <button onClick={() => scrollEffect(homeRef)}>Home</button>
+          <button onClick={() => scrollEffect(aboutRef)}>About</button>
+          <button onClick={() => scrollEffect(projectRef)}>Project</button>
+          <button onClick={() => scrollEffect(contactRef)}>Contact</button>
+        </div>
+      {/* <Header 
       scrollEffect={scrollEffect}
       homeRef={homeRef}
       aboutRef={aboutRef}
       projectRef={projectRef}
       contactRef={contactRef}
-      />
+      /> */}
     </PageContainer>
     <Wrapper>
-      <Home ref={homeRef} />
-      <About ref={aboutRef} />
-      <Project ref={projectRef} />
-      <Contact ref={contactRef} />
+      <div ref={homeRef}>
+      <Home />
+      </div>
+      {/* <Home ref={homeRef} /> */}
+      <div ref={aboutRef}>
+      <About  />
+      </div>
+      <div ref={projectRef}>
+      <Project />
+      </div>
+      <div ref={contactRef}>
+      <Contact />
+      </div>
+      
     </Wrapper>
     </>
   );
@@ -46,6 +62,10 @@ const App = () => {
 
 const PageContainer = styled.div `
 display: flex;
+position: fixed;
+margin: 5px;
+top: 0;
+left: 0;
 `;
 
 const Wrapper = styled.div `

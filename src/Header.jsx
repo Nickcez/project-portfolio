@@ -17,7 +17,7 @@ const Header = ({  scrollEffect, homeRef, aboutRef, projectRef, contactRef }) =>
 const PageContainer = styled.div`
 display: block;
 position: fixed;
-
+margin: 5px;
 top: 0;
 left: 0;
 width: 50%;

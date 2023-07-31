@@ -11,7 +11,7 @@ const Project = () => {
             </div>
         </Ptitle>
         <PImage>
-            <div className="pImage">
+            <div>
             <a href='https://github.com/Nickcez/project-js-nyan-cat.git' target='blank'>
                 <img src={NyanCat} width={300}/>
             </a>
@@ -41,6 +41,12 @@ const Pdescription = styled.div`
 const PImage = styled.div`
 display: block;
 justify-content: space-between;
+
+&:focus {
+    outline: none;
+    border-color: #646cff;
+    transition: border-color 0.3s ease-in-out;
+}
 `;
 
 export default Project;
