@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.header {
+  background-color: #888;
+}
+
 .logo {
   height: 3em;
   padding: 1.5em;
@@ -16,6 +20,15 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.ptitle {
+  font-size: 20px;
+  color: white;
+}
+
+.ImageP {
+  width: 10px;
 }
 
 @keyframes logo-spin {
@@ -55,3 +68,8 @@
 .read-the-docs h2 {
   text-align: center;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
