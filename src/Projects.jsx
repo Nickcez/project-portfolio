@@ -12,11 +12,15 @@ const Project = () => {
         </Ptitle>
         <PImage>
             <div className="pImage">
-            <img src={NyanCat} width={300}/>
+            <a href='https://github.com/Nickcez/project-js-nyan-cat.git' target='blank'>
+                <img src={NyanCat} width={300}/>
+            </a>
             <p>
                 A project to practice and learn about Object Oriented Programming.
             </p>
-            <img src={ComingSoon} width={300}/>
+            <a>
+                <img src={ComingSoon} width={300}/>
+            </a>
             <p>Working on other amazing projects ...</p>
             </div>
         </PImage>
@@ -35,7 +39,7 @@ const Pdescription = styled.div`
 `;
 
 const PImage = styled.div`
-display: flex;
+display: block;
 justify-content: space-between;
 `;
 

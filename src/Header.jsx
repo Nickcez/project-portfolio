@@ -4,7 +4,7 @@ import './App.css';
 const Header = ({  scrollEffect, homeRef, aboutRef, projectRef, contactRef }) => {
     return (
       <PageContainer>
-        <div className='header'>
+        <div>
           <button onClick={() => scrollEffect(homeRef)}>Home</button>
           <button onClick={() => scrollEffect(aboutRef)}>About</button>
           <button onClick={() => scrollEffect(projectRef)}>Project</button>
@@ -14,8 +14,15 @@ const Header = ({  scrollEffect, homeRef, aboutRef, projectRef, contactRef }) =>
     );
   }
 
-const PageContainer = styled.div `
-display: flex;
+const PageContainer = styled.div`
+display: block;
+position: fixed;
+
+top: 0;
+left: 0;
+width: 50%;
 `;
+
+
 
 export default Header;
